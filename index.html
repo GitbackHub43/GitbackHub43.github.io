@@ -16,6 +16,7 @@
     body {
       background: #ffffff;
       color: #111;
+      line-height: 1.6;
     }
 
     .container {
@@ -23,9 +24,8 @@
       margin: 80px auto;
       padding: 20px;
       display: flex;
+      gap: 60px;
       align-items: center;
-      justify-content: space-between;
-      gap: 50px;
     }
 
     .left {
@@ -42,20 +42,27 @@
       margin-bottom: 10px;
     }
 
-    .subtitle {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
     .company {
       font-size: 14px;
       color: #777;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+
+    .text {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 12px;
     }
 
     .contact {
-      margin-top: 20px;
+      margin-top: 25px;
       font-size: 15px;
     }
 
@@ -94,24 +101,41 @@
 
   <div class="container">
 
-    <!-- LEFT SIDE (TEXT) -->
+    <!-- LEFT SIDE -->
     <div class="left">
-      <h1>Thryvenex</h1>
 
-      <div class="subtitle">
-        Building modern digital experiences.
-      </div>
+      <h1>Thryvenex</h1>
 
       <div class="company">
         Thryvenex Holdings LLC
       </div>
 
+      <div class="text">
+        Thryvenex Holdings LLC is a digital company focused on developing mobile applications, interactive software, and technology-driven products built to deliver practical, modern, and engaging user experiences.
+      </div>
+
+      <div class="section-title">What We Do:</div>
+      <div class="text">
+        We create mobile apps and digital products designed for performance, usability, and long-term growth across consumer and business markets.
+      </div>
+
+      <div class="section-title">Our Focus:</div>
+      <div class="text">
+        Our work centers on software innovation, product development, and scalable digital experiences that support evolving market needs.
+      </div>
+
+      <div class="section-title">Our Mission:</div>
+      <div class="text">
+        We aim to build reliable, high-quality applications and digital solutions that combine functionality, accessibility, and thoughtful design.
+      </div>
+
       <div class="contact">
         Contact: <a href="mailto:support@thryvenex.com">support@thryvenex.com</a>
       </div>
+
     </div>
 
-    <!-- RIGHT SIDE (IMAGE) -->
+    <!-- RIGHT SIDE -->
     <div class="right">
       <img src="laptop.jpg" class="hero-img" alt="Preview">
     </div>
