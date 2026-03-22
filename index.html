@@ -10,22 +10,41 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
     body {
-      background: #ffffff;
+      background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
       color: #111;
-      line-height: 1.6;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 20px;
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    header {
       display: flex;
-      gap: 60px;
+      justify-content: space-between;
       align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .company-name {
+      font-size: 13px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 60px;
     }
 
     .left {
@@ -38,32 +57,68 @@
     }
 
     h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
     }
 
-    .company {
+    .description {
+      font-size: 16px;
+      color: #444;
+      max-width: 520px;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+      border: 1px solid #f0f0f0;
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      margin-top: 100px;
       font-size: 14px;
       color: #777;
-      margin-bottom: 25px;
-    }
-
-    .section-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-top: 20px;
-      margin-bottom: 5px;
-    }
-
-    .text {
-      font-size: 15px;
-      color: #444;
-      margin-bottom: 12px;
-    }
-
-    .contact {
-      margin-top: 25px;
-      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     a {
@@ -76,15 +131,8 @@
       text-decoration: underline;
     }
 
-    .hero-img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    @media (max-width: 768px) {
-      .container {
+    @media (max-width: 900px) {
+      .hero {
         flex-direction: column;
         text-align: center;
       }
@@ -92,53 +140,89 @@
       .right {
         text-align: center;
       }
-    }
 
+      .description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      footer {
+        text-align: center;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="wrapper">
 
-    <!-- LEFT SIDE -->
-    <div class="left">
+    <!-- HEADER -->
+    <header>
+      <div>
+        <img src="logo.png" alt="Thryvenex Logo" class="logo">
+        <div class="company-name">Thryvenex Holdings LLC</div>
+      </div>
+    </header>
 
-      <h1>Thryvenex</h1>
+    <!-- HERO -->
+    <section class="hero">
 
-      <div class="company">
-        Thryvenex Holdings LLC
+      <!-- LEFT -->
+      <div class="left">
+        <h1>Building Practical Digital Experiences</h1>
+
+        <div class="description">
+          Thryvenex develops modern software and digital products designed to be intuitive, reliable, and adaptable. Our focus is on creating solutions that deliver real-world value through thoughtful design and efficient performance.
+        </div>
+
+        <div class="grid">
+
+          <div class="card">
+            <div class="card-title">Product Development</div>
+            <div class="card-text">
+              We design and build digital applications with a focus on usability, stability, and long-term scalability.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">User-Centered Design</div>
+            <div class="card-text">
+              Every product is shaped around simplicity and clarity, ensuring seamless interaction and accessibility.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Technology & Innovation</div>
+            <div class="card-text">
+              We leverage modern technologies to create efficient, forward-looking solutions that evolve with user needs.
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="text">
-        Thryvenex Holdings LLC is a digital company focused on developing mobile applications, interactive software, and technology-driven products built to deliver practical, modern, and engaging user experiences.
+      <!-- RIGHT -->
+      <div class="right">
+        <img src="laptop.jpg" class="hero-img" alt="Preview">
       </div>
 
-      <div class="section-title">What We Do:</div>
-      <div class="text">
-        We create mobile apps and digital products designed for performance, usability, and long-term growth across consumer and business markets.
-      </div>
+    </section>
 
-      <div class="section-title">Our Focus:</div>
-      <div class="text">
-        Our work centers on software innovation, product development, and scalable digital experiences that support evolving market needs.
-      </div>
-
-      <div class="section-title">Our Mission:</div>
-      <div class="text">
-        We aim to build reliable, high-quality applications and digital solutions that combine functionality, accessibility, and thoughtful design.
-      </div>
-
-      <div class="contact">
+    <!-- FOOTER -->
+    <footer>
+      <div>© 2026 Thryvenex Holdings LLC</div>
+      <div>
         Contact: <a href="mailto:support@thryvenex.com">support@thryvenex.com</a>
       </div>
-
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="right">
-      <img src="laptop.jpg" class="hero-img" alt="Preview">
-    </div>
+    </footer>
 
   </div>
 
