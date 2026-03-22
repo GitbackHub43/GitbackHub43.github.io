@@ -16,44 +16,47 @@
     body {
       background: #ffffff;
       color: #111;
-      text-align: center;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 80px auto;
       padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
     }
 
-    .logo {
-      width: 120px;
-      margin-bottom: 20px;
+    .left {
+      flex: 1;
+    }
+
+    .right {
+      flex: 1;
+      text-align: right;
     }
 
     h1 {
       font-size: 42px;
       margin-bottom: 10px;
-      letter-spacing: -1px;
     }
 
-    p {
+    .subtitle {
       font-size: 18px;
       color: #555;
+      margin-bottom: 20px;
+    }
+
+    .company {
+      font-size: 14px;
+      color: #777;
       margin-bottom: 30px;
     }
 
-    .hero-img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    .contact {
       margin-top: 20px;
-    }
-
-    .footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #888;
+      font-size: 15px;
     }
 
     a {
@@ -66,6 +69,24 @@
       text-decoration: underline;
     }
 
+    .hero-img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .right {
+        text-align: center;
+      }
+    }
+
   </style>
 </head>
 
@@ -73,21 +94,26 @@
 
   <div class="container">
 
-    <!-- LOGO -->
-    <img src="logo.png" class="logo" alt="Thryvenex Logo">
+    <!-- LEFT SIDE (TEXT) -->
+    <div class="left">
+      <h1>Thryvenex</h1>
 
-    <!-- TITLE -->
-    <h1>Thryvenex</h1>
+      <div class="subtitle">
+        Building modern digital experiences.
+      </div>
 
-    <!-- SUBTEXT -->
-    <p>Building modern digital experiences.</p>
+      <div class="company">
+        Thryvenex Holdings LLC
+      </div>
 
-    <!-- HERO IMAGE -->
-    <img src="laptop.jpg" class="hero-img" alt="Preview">
+      <div class="contact">
+        Contact: <a href="mailto:support@thryvenex.com">support@thryvenex.com</a>
+      </div>
+    </div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-      Contact: <a href="mailto:support@thryvenex.com">support@thryvenex.com</a>
+    <!-- RIGHT SIDE (IMAGE) -->
+    <div class="right">
+      <img src="laptop.jpg" class="hero-img" alt="Preview">
     </div>
 
   </div>
